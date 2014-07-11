@@ -168,4 +168,10 @@ NHibernate.TransactionException: Begin failed with SQL exception ---> System.Dat
    在 NHibernate.Connection.DriverConnectionProvider.GetConnection() 位置 c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\Connection\DriverConnectionProvider.cs:行号 46
    在 NHibernate.AdoNet.ConnectionManager.GetConnection() 位置 c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\AdoNet\ConnectionManager.cs:行号 196
    在 NHibernate.Impl.SessionImpl.get_Connection() 位置 c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\Impl\SessionImpl.cs:行号 1634
-   在 NHiberna
+   在 NHibernate.Transaction.AdoTransaction.Begin(IsolationLevel isolationLevel) 位置 c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\Transaction\AdoTransaction.cs:行号 137
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 NHibernate.Transaction.AdoTransaction.Begin(IsolationLevel isolationLevel) 位置 c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\Transaction\AdoTransaction.cs:行号 148
+   在 NHibernate.Impl.SessionImpl.BeginTransaction(IsolationLevel isolationLevel) 位置 c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\Impl\SessionImpl.cs:行号 1451
+   在 Orchard.Data.SessionLocator.RequireNew(IsolationLevel level) 位置 c:\Orchard\src\Orchard\Data\SessionLocator.cs:行号 73
+   在 Orchard.Data.SessionLocator.RequireNew() 位置 c:\Orchard\src\Orchard\Data\SessionLocator.cs:行号 51
+   在 Orchard.Tasks.BackgroundService.Sweep() 位置 c:\Orchard\src\Orchard\Tasks\BackgroundService.cs:行号 29
